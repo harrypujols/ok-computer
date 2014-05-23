@@ -514,10 +514,10 @@ i {
   height: 16px;
   display: inline-block;
   margin-bottom: -2px;
-  background: url("img/icons.png") top left no-repeat; }
+  background: url("../img/icons.png") top left no-repeat; }
 
 i.icon-white {
-  background: url("img/icons-white.png") top left no-repeat; }
+  background: url("../img/icons-white.png") top left no-repeat; }
 
 i.icon-camera {
   width: 16px;
