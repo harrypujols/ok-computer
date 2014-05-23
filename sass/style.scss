@@ -69,17 +69,29 @@ header {
 footer {
 
 }
+
 h2, h3, h4 {
 	text-decoration: normal;
-	text-align: center;
-	@include blink(0.7s);
+	// text-align: center;
+}
+
+.blink {
+  @include blink(0.7s);
+}
+
+.blink-cursor {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  vertical-align: middle;
+  @include blink(0.5s);
 }
 /* ==========================================================================
    media queries
    ========================================================================== */
    @include media(min-width 760px) {
 	   #about, #work, #contact {
-		@include span-columns(4);
+		// @include span-columns(4);
 	}
 }
 
