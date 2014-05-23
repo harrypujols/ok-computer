@@ -3,23 +3,22 @@ var gulp = require('gulp'),
     neat = require('node-neat').includePaths,
     deploy = require('gulp-gh-pages');
 
-var paths = {
-    scss: './site/sass/*.scss'
-};
-
 // --- Styles ---
 gulp.task('styles', function () {
-    return gulp.src(paths.scss)
+    return gulp.src('./site/sass/*.scss')
         .pipe(sass({
-            includePaths: ['styles'].concat(neat)
+            includePaths: ['./site/sass'].concat(neat)
         }))
         .pipe(gulp.dest('./site/css'));
 });
 
-// --- Deploy ---
+// --- Deploy pages ---
 gulp.task('deploy', function () {
     gulp.src('./site/**/*')
-        .pipe(deploy('https://github.com/harrypujols/ok-computer', 'origin'));
+        .pipe(deploy(
+          'https://github.com/harrypujols/ok-computer', 
+          'origin'
+        ));
 });
 
 gulp.task('default', ['styles']);
