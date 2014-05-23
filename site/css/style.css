@@ -483,8 +483,9 @@ header {
 
 
 h2, h3, h4 {
-  text-decoration: normal;
-  text-align: center;
+  text-decoration: normal; }
+
+.blink {
   -webkit-animation: blinking 0.7s infinite;
   -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
   -moz-animation: blinking 0.7s infinite;
@@ -494,17 +495,24 @@ h2, h3, h4 {
   animation: blinking 0.7s infinite;
   animation-timing-function: cubic-bezier(1, 0, 0, 1); }
 
+.blink-cursor {
+  display: inline-block;
+  width: 20px;
+  height: 40px;
+  vertical-align: middle;
+  -webkit-animation: blinking 0.5s infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -moz-animation: blinking 0.5s infinite;
+  -moz-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  -ms-animation: blinking 0.5s linear infinite;
+  -o-animation: blinking 0.5s linear infinite;
+  animation: blinking 0.5s infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1); }
+
 /* ==========================================================================
    media queries
    ========================================================================== */
-@media screen and (min-width: 760px) {
-  #about, #work, #contact {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 31.76157%; }
-    #about:last-child, #work:last-child, #contact:last-child {
-      margin-right: 0; } }
+@media screen and (min-width: 760px) { }
 
 /* ==========================================================================
    icons
