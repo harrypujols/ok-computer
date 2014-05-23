@@ -2,6 +2,9 @@
   "name": "foo",
   "version": "0.0.0",
   "dependencies": {
-    "express": "visionmedia/express"
+    "gulp": "^3.6.2",
+    "gulp-gh-pages": "^0.2.0",
+    "node-neat": "^1.3.0",
+    "node-bourbon": "^1.2.3"
   }
 }
