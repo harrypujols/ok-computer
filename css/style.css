@@ -498,7 +498,7 @@ h2, h3, h4 {
 .blink-cursor {
   display: inline-block;
   width: 20px;
-  height: 28px;
+  height: 26px;
   vertical-align: middle;
   -webkit-animation: blinking 0.5s infinite;
   -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
