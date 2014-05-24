@@ -14,11 +14,10 @@ gulp.task('styles', function () {
 
 // --- Deploy pages ---
 gulp.task('deploy', function () {
-    gulp.src('./site/**/*')
-        .pipe(deploy(
-          'https://github.com/harrypujols/ok-computer', 
-          'origin'
-        ));
+    gulp.src('./site/')
+        .pipe(deploy({
+          remoteUrl: 'https://github.com/harrypujols/ok-computer'
+        }));
 });
 
 gulp.task('default', ['styles']);
