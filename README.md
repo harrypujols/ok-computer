@@ -1,6 +1,6 @@
-ok-computer
-===========
+[OK-COMPUTER](http://harrypujols.github.io/ok-computer)
+=============
 
-Ok Computer color scheme for Coda 2
+>> COLOR SCHEME FOR CODA 2 >>
 
-Repo's page: http://harrypujols.github.io/ok-computer
+**OK _**
