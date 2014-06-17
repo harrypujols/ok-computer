@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*
+Theme Name: Ok-Computer
+Description: Just a Web page
+Author: Harry Pujols
+Author URI: http://harrypujols.com/
+Github Theme URI: https://github.com/harrypujols/ok-computer
+Version: 0.0.0
+*/
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: normalize
+:: scafolding
+:: media queries
+::
+:: icons
+*/
+@import 'settings';
+@import 'normalize';
+@import 'bourbon';
+@import 'neat/neat';
+@import "neat/neat-helpers";
+
+
+/* ==========================================================================
+   base
+   ========================================================================== */
+::-moz-selection {
+    background: $dark;
+    text-shadow: none;
+    color: $light;
+}
+
+::selection {
+    background: $dark;
+    text-shadow: none;
+    color: $light;
+}
+
+body {
+	background: $light;
+	font-family: 'Share Tech Mono', monospace;
+}
+a {
+	background-color: $dark;
+	color: $light;
+	text-decoration: none;
+	&:hover {
+		background-color: $medium;
+	}
+}
+#container {
+  @include outer-container;
+}
+h1 {
+	  font-size: golden-ratio(32px,  1);
+	  font-style: normal;
+	  background-color: $medium-light;
+}
+header {
+	@include divider;
+}
+#content {
+	@include outer-container;
+	@include divider;
+}
+
+footer {
+
+}
+
+h2, h3, h4 {
+	text-decoration: normal;
+	// text-align: center;
+}
+
+.blink {
+  @include blink(0.7s);
+}
+
+.blink-cursor {
+  display: inline-block;
+  width: 20px;
+  height: 26px;
+  vertical-align: middle;
+  @include blink(0.5s);
+}
+/* ==========================================================================
+   media queries
+   ========================================================================== */
+   @include media(min-width 760px) {
+	   #about, #work, #contact {
+		// @include span-columns(4);
+	}
+}
+
+/* ==========================================================================
+   icons
+   ========================================================================== */
+@import "icons";

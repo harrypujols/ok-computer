@@ -1,0 +1,49 @@
+//colors
+$dark: #000;
+$medium:#377605;
+$medium-light: #65CF0F;
+$light:#76f013;
+$hilight: #FEF734;
+
+//font
+@import url("http://fonts.googleapis.com/css?family=Share+Tech+Mono");
+
+/* ==========================================================================
+   animation
+   ========================================================================== */
+
+@keyframes blinking {  
+    from { 
+	    background-color: $dark;
+		color: $light;
+    }
+    to { 
+	    background-color: $hilight;
+		color: $dark;
+    }
+}
+@-webkit-keyframes blinking {
+    from { 
+	    background-color: $dark;
+		color: $light;
+    }
+    to { 
+	    background-color: $hilight;
+		color: $dark;
+    }
+}
+@mixin blink($time)  {
+    -webkit-animation: blinking $time infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -moz-animation: blinking $time infinite;
+    -moz-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -ms-animation: blinking $time  linear infinite;
+    -o-animation: blinking $time  linear infinite;
+    animation: blinking $time infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+} 
+
+//elements
+@mixin divider {
+	border-bottom: thin dotted $dark;
+}
